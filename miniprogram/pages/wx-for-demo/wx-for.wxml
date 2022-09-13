@@ -1,0 +1,23 @@
+<!--pages/wx-for-demo/wx-for.wxml-->
+
+<view class="container" wx:for="{{artData}}" wx:key="id">
+
+    <view class="author">
+        <image src="{{item.aPhoto}}"></image>
+        <text>{{item.author}}</text>
+    </view>
+
+    <image class="news-pic" src="{{item.bigImg}}"></image>
+
+    <view class="news-content">
+        <text class="hot-point">热点</text>
+        <view class="news-title">{{item.tit}}</view>
+    </view>
+
+    <view class="news-intro">{{item.intro}}</view>
+
+    <view class="discuss">
+        <view>{{item.clickNum}}</view>
+        <view>{{item.great}}</view>
+    </view>
+</view>

@@ -1,0 +1,15 @@
+<view class="btn-container" wx:if="{{!show}}">
+<view class="close" bindtap="unEdit">关闭</view>
+<view class="edit" bindtap="manage">整理</view>
+</view>
+
+<view class="book-container">
+    <view class="item" bindlongpress="onEdit" wx:for="{{data}}" wx:key="key">
+        <view class="atEdit" wx:if="{{edit}}">
+        <view class="delete" bindtap="delete" data-name="{{item.name}}" data-author="{{item.author}}">删除</view>
+        </view>
+        <image src="{{item.fileID}}" alt="" />
+        <view>{{item.author}}</view>
+        <view>{{item.name}}</view>
+    </view>
+</view>

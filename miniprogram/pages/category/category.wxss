@@ -1,0 +1,133 @@
+/* pages/category/category.wxss */
+.search-container{
+    width: 95%;
+    height: 40px;
+    padding: 8px;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #e1e1e1;
+    align-items: center;
+}
+.icon{
+    width: 50px;
+    position: absolute;
+    left: calc(50% - 55px);
+}
+.icon text{
+color: #e1e1e1;
+}
+.scan{
+    width: 32px;
+    height: 32px;
+    margin: 0 auto;
+}
+.scan text{
+    color: rgb(7, 205, 255);
+    font-size: 32px;
+}
+.search-input{
+    padding: 0px 10px;
+    height: 32px;
+    border-radius: 5px;
+    background-color: rgba(54, 51, 51, 0.747);
+    margin: 0 5px;
+    width: 220px;
+}
+.search-btn{
+    z-index: 2;
+    text-align: center;
+    line-height: 25px;
+    height: 25px;
+    width: 40px;
+    position: absolute;
+    top: 15px;
+    right: 90px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #666666;
+    text-align: center;
+}
+.search-res{
+    width: 240px;
+    border: 1px solid #e1e1e1;
+    position: absolute;
+    right: 66px;
+    top: 44px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.search-res view{
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px solid #e1e1e1;
+}
+.cancel-btn{
+    z-index: 2;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 10px;
+    text-align: center;
+    line-height: 15px;
+    border: 1px solid #e1e1e1;
+    background-color: #666666;
+    position: absolute;
+    top: 20px;
+    right: 75px;
+}
+.rank-container{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.rank-container image{
+    width: 150px;
+    height: 80px;
+    border-radius: 10px;
+    margin: 10px 15px;
+}
+.divide{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.divide view:nth-child(2n+1){
+    margin: 0 5px;
+    width: 130px;
+    border: 1px dashed #000;
+    height: 0px;
+}
+.cate-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.cate-item{
+    width: 150px;
+    height: 100px;
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+    margin: 10px 0px 0px 5px;
+}
+.cate-item image{
+    width: 150px;
+    height: 100px;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.cate-item text{
+    color: #fff;
+    position: relative;
+    font-size: larger;
+    font-weight: larger;
+    line-height: 100px;
+}

@@ -1,0 +1,17 @@
+<!--pages/detail/detail.wxml-->
+<view class="bigTitle">
+    <view wx:if="{{show}}">不要温和地走进那良夜，
+        老年应当在日暮时燃烧咆哮；
+        怒斥，怒斥光明的消逝。</view>
+        <view wx:if="{{!show}}">{{desc}}</view>
+    <image src="../../images/tab_icon2.png"></image>
+</view>
+<view class="container">
+
+    <view class="item" wx:for="{{books}}" wx:key="_id" bindtap="onBlurItem" data-name="{{item.name}}" data-author="{{item.author}}">
+        <image src="{{item.fileID}}" alt="" />
+        <view>{{item.author}}</view>
+        <view>{{item.name}}</view>
+    </view>
+
+</view>

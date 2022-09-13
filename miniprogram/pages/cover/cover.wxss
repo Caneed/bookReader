@@ -1,0 +1,86 @@
+/* pages/cover/cover.wxss */
+.container{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.container image{
+    margin: 20px 0px;
+    width: 100px;
+    height: 150px;
+}
+.container view:nth-child(3){
+    font-size: 14px;
+    color: rgb(50, 138, 138);
+}
+.container view:nth-child(4){
+    color: #e1e1e1;
+    font-size: 12px;
+}
+.btn-container{
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    bottom: -5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.btn-container view{
+    text-align: center;
+    line-height: 40px;
+    width: 50%;
+    border-bottom: 1px solid #e1e1e1;
+}
+.unActived{
+    opacity: 0.3;
+}
+.actived{
+    opacity: 1;
+}
+.text{
+    margin-top: 10px;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 30px;
+    border-bottom: 1px solid #e1e1e1;
+}
+.onHover{
+    border-bottom: 5px solid #000;
+    overflow: scroll
+}
+.desc{
+    width: 80%;
+    padding: 30px;
+    text-align: center;
+}
+
+.funBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+.funBar view{
+    width: 50%;
+    border-top: 1px solid #e1e1e1;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+}
+.funBar view:nth-child(1){
+    color: black;
+    font-weight: bolder;
+    background-color: #fff;
+}
+.funBar view:nth-child(2){
+    color: #fff;
+    background-color: rgb(241, 148, 7);
+    font-weight: bolder;
+}

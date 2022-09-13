@@ -1,0 +1,19 @@
+<view class="container">
+    <image src="{{url}}"></image>
+    <view>{{name}}</view>
+    <view>{{author}}</view>
+    <view>xxx人在读></view>
+
+    <view class="btn-container">
+        <view class="unActived {{!show?'':'actived'}}" data-index="1" bindtap="onTap" capture-bind:tap="">详情</view>
+        <view class="unActived {{show?'':'actived'}}" data-index="2" bindtap="onTap">目录</view>
+    </view>
+
+</view>
+<view class="desc" wx:if="{{show}}">{{desc}}</view>
+<view class="text" wx:if="{{!show}}" wx:for="{{dir}}" wx:key="key">{{item}}</view>
+
+<view class="funBar">
+<view bindtap="onAddDesk">加入书桌</view>
+<view>阅读</view>
+</view>

@@ -1,0 +1,45 @@
+<!-- 搜索栏 -->
+<view class="search-container">
+    <input type="text" class="search-input" bindtap="onReadyForSearch" bindinput="onInputRes" 	bindblur="onBindBlur" model:value="{{searchVal}}"/>
+
+    <view class="icon" wx:if="{{searching}}">
+        <text class="iconfont icon-sousuo">搜索</text>
+    </view>
+<!-- 搜索时出现的按钮和下拉索引 -->
+    <view class="funBar">
+        <view class="search-btn" wx:if="{{!searching}}" bindtap="onSearchConfirm">搜索</view>
+        <view class="cancel-btn" wx:if="{{!searching}}" bindtap="onCancelSearch">×</view>
+        <view class="search-res" wx:if="{{!searching}}" >
+            <view bindtap="onQueryColumn" wx:for="{{searchArr}}" wx:key="_id" data-name="{{item.name}}" data-author="{{item.author}}">作者:{{item.author}} 书名:{{item.name}}</view>
+        </view>
+    </view>
+
+    <view class="scan">
+        <text class="iconfont icon-scan"></text>
+    </view>
+</view>
+
+
+<view class="container" wx:if="{{searching}}">
+    <!-- 排行栏 -->
+    <view class="rank-container">
+        <image src="cloud://cloud1-2gut6nu65856e9b5.636c-cloud1-2gut6nu65856e9b5-1311477485/pic/backiee-224482-landscape.jpg"></image>
+        <image src="cloud://cloud1-2gut6nu65856e9b5.636c-cloud1-2gut6nu65856e9b5-1311477485/pic/backiee-221645-landscape.jpg"></image>
+    </view>
+    <view class="divide">
+        <view></view>
+        <view>分类</view>
+        <view></view>
+    </view>
+
+    <!-- 分类 -->
+    <view class="cate-container">
+
+        <!-- 分类条目 -->
+        <view class="cate-item" wx:for="{{cateArr}}" wx:key="_id" bindtap="onQueryByCate" data-cate="{{item.name}}">
+            <image src="{{item.cover}}"></image>
+            <text class="title">{{item.name}}</text>
+        </view>
+
+    </view>
+</view>
